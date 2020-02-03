@@ -1,0 +1,25 @@
+---
+- name: Check if NodeSource repository is already configured
+  stat:
+    path: "{{ nodesource_repo_file }}"
+  register: nodesource_repo_file_result
+
+# retry options taken from
+# https://github.com/geerlingguy/ansible-role-repo-epel/blob/master/tasks/main.yml
+- name: Install NodeSource repo RPM
+  yum:
+    name: "https://rpm.nodesource.com/pub_{{ nodesource_version }}.x/el/\
+           {{ ansible_distribution_major_version }}/{{ ansible_userspace_architecture }}/\
+           nodesource-release-el{{ ansible_distribution_major_version }}-1.noarch.rpm"
+    state: installed
+  register: result
+  until: result is succeeded
+  retries: 2
+  delay: 5
+  when: not nodesource_repo_file_result.stat.exists
+
+- name: Install Node.js
+  yum:
+    name: "{{ nodesource_packages|flatten }}"
+    state: "{{ nodesource_packages_state }}"
+    update_cache: yes

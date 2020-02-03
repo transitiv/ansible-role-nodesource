@@ -1,0 +1,34 @@
+---
+galaxy_info:
+  role_name: nodesource
+  author: Adam James (atj)
+  description: Installs Node.js from the NodeSource package repositories.
+  company: Transitiv Technologies Ltd.
+
+  travis_status_url: https://travis-ci.com/transitiv/ansible-role-nodesource.svg?branch=master
+  issue_tracker_url: https://github.com/transitiv/ansible-role-nodesource/issues
+
+  license: MIT
+
+  min_ansible_version: 2.4
+
+  platforms:
+    - name: EL
+      versions:
+        - 6
+        - 7
+        - 8
+    - name: Ubuntu
+      versions:
+        - xenial
+        - bionic
+    - name: Debian
+      versions:
+        - stretch
+        - buster
+
+  galaxy_tags:
+    - nodejs
+    - javascript
+
+dependencies: []

@@ -1,0 +1,7 @@
+---
+nodesource_version: 13
+nodesource_packages:
+  - nodejs
+# see the state parameter in the apt and yum module for valid values
+nodesource_packages_state: present
+nodesource_repo_file: /etc/yum.repos.d/nodesource-el{{ ansible_distribution_major_version }}.repo
