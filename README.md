@@ -1,6 +1,6 @@
 # Ansible Role: NodeSource
 
-[![Build Status](https://travis-ci.com/transitiv/ansible-role-nodesource.svg?branch=master)](https://travis-ci.com/transitiv/ansible-role-nodesource)
+![Build Status](https://github.com/transitiv/ansible-role-nodesource/workflows/CI/badge.svg)
 
 This role installs Node.js from the [NodeSource package repositories](https://github.com/nodesource/distributions/blob/master/README.md) on systems running Debian/Ubuntu and RHEL/CentOS.
 
@@ -25,9 +25,7 @@ This role has no dependencies.
 nodesource_version: 13
 ```
 
-Defines the version of Node.js that will be installed. NodeSource currently provides versions 10, 12 and 13.
-
-**Note** [Only Node.js 11.x is supported on CentOS / RHEL 6](https://github.com/nodesource/distributions/blob/master/README.md#rpm).
+Defines the version of Node.js that will be installed. NodeSource currently provides versions 10, 12, 13 and 14.
 
 ```yaml
 nodesource_packages:

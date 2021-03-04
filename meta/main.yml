@@ -5,7 +5,7 @@ galaxy_info:
   description: Installs Node.js from the NodeSource package repositories.
   company: Transitiv Technologies Ltd.
 
-  travis_status_url: https://travis-ci.com/transitiv/ansible-role-nodesource.svg?branch=master
+  travis_status_url: https://github.com/transitiv/ansible-role-nodesource/workflows/CI/badge.svg
   issue_tracker_url: https://github.com/transitiv/ansible-role-nodesource/issues
 
   license: MIT
